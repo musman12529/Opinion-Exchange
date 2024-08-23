@@ -1,0 +1,239 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.post h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.comments {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Add more styling as needed */
+
+/* ... (previous CSS code) ... */
+
+.draft-form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Search bar styles */
+.search-bar {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar input, .search-bar select {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Login/Signup Modal styles */
+.login-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.login-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 30%;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+#logoutBtn {
+  display: none;
+  cursor: pointer;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-comments{
+  margin-top: 10px;
+}
+.my-draft-buttons{
+  display: flex;
+  gap: 15px;
+}
+
+.delete-draft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.rating {
+  all: initial;
+  --dir: right;
+  --fill: gold;
+  --fillbg: rgba(100, 100, 100, 0.15);
+  --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+  --stars: 5;
+  --starsize: 2rem;
+  --symbol: var(--star);
+  --value: 0;
+  --w: calc(var(--stars) * var(--starsize));
+  --x: calc(100% * (var(--value) / var(--stars)));
+  block-size: var(--starsize);
+  inline-size: var(--w);
+  position: relative;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+}
+[dir="rtl"] .rating {
+  --dir: left;
+}
+.rating::-moz-range-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-webkit-slider-runnable-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+  -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-moz-range-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+}
+.rating::-webkit-slider-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+  -webkit-appearance: none;
+}
+.rating, .rating-label {
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  margin-block-end: 0.25rem;
+}
+
+
+
+.reset-password-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-password-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reset-password-form input {
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.reset-password-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reset-password-form button:hover {
+    background-color: #555;
+}
+

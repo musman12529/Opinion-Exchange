@@ -1,0 +1,986 @@
+{
+	"info": {
+		"_postman_id": "588857c5-f42c-4a70-914b-6774937b20fa",
+		"name": "Server_Test_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23156109"
+	},
+	"item": [
+		{
+			"name": "Start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Nov 2023 23:45:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "706"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n        <title>Login</title>\n    </head>\n    <body>\n        <div class=\"login-modal\" id=\"loginModal\">\n            <div class=\"login-content\">\n                <h1>Login</h1>\n                <form action=\"/login\" method=\"post\" class=\"login-form\">\n                    <label for=\"username\">Username:</label>\n                    <input type=\"text\" id=\"username\" name=\"username\" required>\n                    <br>\n                    <label for=\"password\">Password:</label>\n                    <input type=\"password\" id=\"password\" name=\"password\" required>\n                    <br>\n                    <button type=\"submit\">Login</button>\n                </form>\n                <p>Don't have an account? \n                    <a href=\"/register\">Register here</a>\n                </p>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "zuhair",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "zuhair",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:00:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "98"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Registration failed. Password and Confirm Password do not match. \n<a href='/register'>Try again</a>"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "zuhair",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "zuhair",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:03:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7721"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n        <title>Forum Home</title>\n    </head>\n    <body>\n        <header>\n            <nav>\n                <ul>\n                    <li>\n                        <a href=\"/home\">Home</a>\n                    </li>\n                    <li>\n                        <a href=\"/mydrafts\">My Drafts</a>\n                    </li>\n                    <li>\n                        <a href=\"/\">Logout</a>\n                    </li>\n                </ul>\n            </nav>\n        </header>\n        <main>\n            <h1>Welcome to the Forum</h1>\n            <div class=\"search-bar\">\n                <input type=\"text\" id=\"searchInput\" placeholder=\"Search drafts by topic or author...\" />\n            </div>\n            <form action=\"/create-draft\" method=\"post\" class=\"draft-form\">\n                <label for=\"topic\">Topic:</label>\n                <input type=\"text\" id=\"topic\" name=\"topic\" required>\n                <br>\n                <label for=\"body\">Body:</label>\n                <textarea id=\"body\" name=\"body\" rows=\"4\" required></textarea>\n                <br>\n                <button type=\"submit\">Create Draft</button>\n            </form>\n            <div id=\"container\">\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Stephen&#039;s hat</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>I think Stephen&#039;s hat is great. I love the color. How does everyone else feel?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Clinton&#039;s shirt</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    clinton\n                    </div>\n                    <p>I think Clinton&#039;s shirt is great. I love the cut. Thougths or opinions?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">hi</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>hi</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n            </div>\n        </main>\n        <script>\r\n\r\n\r\n        const searchInput = document.getElementById(\"searchInput\");\r\n        searchInput.addEventListener(\"input\", function () {\r\n            const searchTerm = searchInput.value.toLowerCase();\r\n            const allDrafts = document.querySelectorAll(\".post\");\r\n            allDrafts.forEach((draft) => {\r\n                const topic = draft.querySelector(\"h2 a\").textContent.toLowerCase();\r\n                const author = draft.querySelector(\"p\").textContent.toLowerCase();\r\n                if (topic.includes(searchTerm) || author.includes(searchTerm)) {\r\n                    draft.style.display = \"block\";\r\n                } else {\r\n                    draft.style.display = \"none\";\r\n                }\r\n            });\r\n        });\r\n    </script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"home"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:04:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7721"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n        <title>Forum Home</title>\n    </head>\n    <body>\n        <header>\n            <nav>\n                <ul>\n                    <li>\n                        <a href=\"/home\">Home</a>\n                    </li>\n                    <li>\n                        <a href=\"/mydrafts\">My Drafts</a>\n                    </li>\n                    <li>\n                        <a href=\"/\">Logout</a>\n                    </li>\n                </ul>\n            </nav>\n        </header>\n        <main>\n            <h1>Welcome to the Forum</h1>\n            <div class=\"search-bar\">\n                <input type=\"text\" id=\"searchInput\" placeholder=\"Search drafts by topic or author...\" />\n            </div>\n            <form action=\"/create-draft\" method=\"post\" class=\"draft-form\">\n                <label for=\"topic\">Topic:</label>\n                <input type=\"text\" id=\"topic\" name=\"topic\" required>\n                <br>\n                <label for=\"body\">Body:</label>\n                <textarea id=\"body\" name=\"body\" rows=\"4\" required></textarea>\n                <br>\n                <button type=\"submit\">Create Draft</button>\n            </form>\n            <div id=\"container\">\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Stephen&#039;s hat</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>I think Stephen&#039;s hat is great. I love the color. How does everyone else feel?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Clinton&#039;s shirt</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    clinton\n                    </div>\n                    <p>I think Clinton&#039;s shirt is great. I love the cut. Thougths or opinions?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">hi</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>hi</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n            </div>\n        </main>\n        <script>\r\n\r\n\r\n        const searchInput = document.getElementById(\"searchInput\");\r\n        searchInput.addEventListener(\"input\", function () {\r\n            const searchTerm = searchInput.value.toLowerCase();\r\n            const allDrafts = document.querySelectorAll(\".post\");\r\n            allDrafts.forEach((draft) => {\r\n                const topic = draft.querySelector(\"h2 a\").textContent.toLowerCase();\r\n                const author = draft.querySelector(\"p\").textContent.toLowerCase();\r\n                if (topic.includes(searchTerm) || author.includes(searchTerm)) {\r\n                    draft.style.display = \"block\";\r\n                } else {\r\n                    draft.style.display = \"none\";\r\n                }\r\n            });\r\n        });\r\n    </script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "create draft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "topic",
+							"value": "dd",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "dd",
+							"type": "text"
+						},
+						{
+							"key": "team_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-draft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-draft"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "topic",
+									"value": "dd",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "dd",
+									"type": "text"
+								},
+								{
+									"key": "team_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/create-draft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create-draft"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:06:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8627"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n        <title>Forum Home</title>\n    </head>\n    <body>\n        <header>\n            <nav>\n                <ul>\n                    <li>\n                        <a href=\"/home\">Home</a>\n                    </li>\n                    <li>\n                        <a href=\"/mydrafts\">My Drafts</a>\n                    </li>\n                    <li>\n                        <a href=\"/\">Logout</a>\n                    </li>\n                </ul>\n            </nav>\n        </header>\n        <main>\n            <h1>Welcome to the Forum</h1>\n            <div class=\"search-bar\">\n                <input type=\"text\" id=\"searchInput\" placeholder=\"Search drafts by topic or author...\" />\n            </div>\n            <form action=\"/create-draft\" method=\"post\" class=\"draft-form\">\n                <label for=\"topic\">Topic:</label>\n                <input type=\"text\" id=\"topic\" name=\"topic\" required>\n                <br>\n                <label for=\"body\">Body:</label>\n                <textarea id=\"body\" name=\"body\" rows=\"4\" required></textarea>\n                <br>\n                <button type=\"submit\">Create Draft</button>\n            </form>\n            <div id=\"container\">\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Stephen&#039;s hat</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>I think Stephen&#039;s hat is great. I love the color. How does everyone else feel?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">Clinton&#039;s shirt</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    clinton\n                    </div>\n                    <p>I think Clinton&#039;s shirt is great. I love the cut. Thougths or opinions?</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>zuhair</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                        <div class=\"comment\" style=\"display: flex; align-items: center; gap: 5px; margin: 5px 0;\">\n                            <div class=\"user\" style=\"display: flex; align-items: center; gap: 5px;\">\n                                <img\r\n                                width=\"30px\"\r\n                                src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=2\"\r\n                                alt=\"avatar\"\r\n                            />\n                                <strong>clinton</strong>\n                            </div>\n                            <div class=\"body\">\r\n                            Awesome review. We love to see it.\r\n                        </div>\n                        </div>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">hi</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>hi</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n                <div class=\"post\">\n                    <h2>\n                        <a href=\"/post/${data[i]['getID']}\">dd</a>\n                    </h2>\n                    <div class=\"author\" style=\"display: flex; align-items: center; gap: 10px;\">\n                        <img\r\n                        width=\"40px\"\r\n                        src=\"https://api.dicebear.com/7.x/bottts-neutral/svg?seed=1\"\r\n                        alt=\"avatar\"\r\n                    />\r\n                    zuhair\n                    </div>\n                    <p>dd</p>\n                    <details class=\"comments\">\n                        <summary style=\"margin:20px 0\">Comments</summary>\n                    </details>\n                    <form action=\"/create-comment\" style=\"display:flex; margin: 10px 0;\">\n                        <textarea type=\"text\" placeholder=\"Write a comment\"></textarea>\n                        <button type=\"submit\">Submit</button>\n                    </form>\n                </div>\n            </div>\n        </main>\n        <script>\r\n\r\n\r\n        const searchInput = document.getElementById(\"searchInput\");\r\n        searchInput.addEventListener(\"input\", function () {\r\n            const searchTerm = searchInput.value.toLowerCase();\r\n            const allDrafts = document.querySelectorAll(\".post\");\r\n            allDrafts.forEach((draft) => {\r\n                const topic = draft.querySelector(\"h2 a\").textContent.toLowerCase();\r\n                const author = draft.querySelector(\"p\").textContent.toLowerCase();\r\n                if (topic.includes(searchTerm) || author.includes(searchTerm)) {\r\n                    draft.style.display = \"block\";\r\n                } else {\r\n                    draft.style.display = \"none\";\r\n                }\r\n            });\r\n        });\r\n    </script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "modify draft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "body",
+							"value": "df",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "zuhair",
+							"type": "text"
+						},
+						{
+							"key": "review_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/modify-draft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modify-draft"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:07:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "749"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "    \n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html>\n    <head>\n        <title>Error: 500 Internal Server Error</title>\n        <style type=\"text/css\">\n              html {background-color: #eee; font-family: sans;}\n              body {background-color: #fff; border: 1px solid #ddd;\n                    padding: 15px; margin: 15px;}\n              pre {background-color: #eee; border: 1px solid #ddd; padding: 5px;}\n            </style>\n    </head>\n    <body>\n        <h1>Error: 500 Internal Server Error</h1>\n        <p>Sorry, the requested URL \n            <tt>&#039;http://localhost:8080/mydrafts&#039;</tt>\n               caused an error:\n        </p>\n        <pre>Internal Server Error</pre>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Styles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/styles.css",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"styles.css"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/styles.css",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"styles.css"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:43:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/css; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2299"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 09 Nov 2023 20:01:58 GMT"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						}
+					],
+					"cookie": [],
+					"body": "*{\r\n  box-sizing: border-box;\r\n}\r\nbody {\r\n  font-family: Arial, sans-serif;\r\n  margin: 0;\r\n  padding: 0;\r\n  background-color: #f0f0f0;\r\n}\r\n\r\nheader {\r\n  background-color: #333;\r\n  color: #fff;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  list-style-type: none;\r\n  padding: 0;\r\n  display: flex;\r\n}\r\n\r\nnav ul li {\r\n  display: inline;\r\n  margin-right: 20px;\r\n}\r\n\r\nnav a {\r\n  text-decoration: none;\r\n  color: #fff;\r\n}\r\n\r\nmain {\r\n  padding: 20px;\r\n}\r\n\r\n.post {\r\n  background-color: #fff;\r\n  padding: 20px;\r\n  margin: 10px;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\n.post h2 a {\r\n  text-decoration: none;\r\n  color: #333;\r\n}\r\n\r\n.comments {\r\n  background-color: #f0f0f0;\r\n  padding: 10px;\r\n  margin-top: 10px;\r\n}\r\n\r\n/* Add more styling as needed */\r\n\r\n/* ... (previous CSS code) ... */\r\n\r\n.draft-form {\r\n  background-color: #fff;\r\n  padding: 20px;\r\n  margin: 10px;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\nlabel {\r\n  display: block;\r\n  margin-bottom: 5px;\r\n}\r\n\r\ninput,\r\ntextarea {\r\n  padding: 10px 5px;\r\n  border: 1px solid #ddd;\r\n  border-radius: 4px;\r\n}\r\n\r\nform{\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\nbutton {\r\n  background-color: #333;\r\n  color: #fff;\r\n  padding: 10px 20px;\r\n  border: none;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n}\r\n\r\nbutton:hover {\r\n  background-color: #555;\r\n}\r\n\r\n/* Search bar styles */\r\n.search-bar {\r\n  margin: 10px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.search-bar input, .search-bar select {\r\n  width: 200px;\r\n  padding: 10px;\r\n  border: 1px solid #ddd;\r\n  border-radius: 4px;\r\n}\r\n\r\n/* Login/Signup Modal styles */\r\n.login-modal {\r\n  display: block;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(0, 0, 0, 0.7);\r\n  z-index: 9999;\r\n}\r\n\r\n.login-content {\r\n  background-color: #fff;\r\n  margin: 15% auto;\r\n  padding: 20px;\r\n  width: 30%;\r\n  border: 1px solid #ddd;\r\n  position: relative;\r\n}\r\n\r\n#logoutBtn {\r\n  display: none;\r\n  cursor: pointer;\r\n}\r\n\r\n.login-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.toggle-comments{\r\n  margin-top: 10px;\r\n}\r\n.my-draft-buttons{\r\n  display: flex;\r\n  gap: 15px;\r\n}\r\n\r\n.delete-draft {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  align-self: center;\r\n  margin: 0;\r\n  align-self: center;\r\n  flex-direction: column;\r\n  margin-top: 10px;\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Register Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:44:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "873"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n        <title>Login</title>\n    </head>\n    <body>\n        <div class=\"login-modal\" id=\"loginModal\">\n            <div class=\"login-content\">\n                <h1>Register</h1>\n                <form action=\"/register\" method=\"post\" class=\"login-form\">\n                    <label for=\"username\">Username:</label>\n                    <input type=\"text\" id=\"username\" name=\"username\" required>\n                    <br>\n                    <label for=\"password\">Password:</label>\n                    <input type=\"password\" id=\"password\" name=\"password\" required>\n                    <br>\n                    <label for=\"confirm_password\">Confirm Password:</label>\n                    <input type=\"password\" id=\"confirm_password\" name=\"confirm_password\" required>\n                    <br>\n                    <button type=\"submit\">Register Account</button>\n                </form>\n                <p>Already have an account? \n                    <a href=\"/start\">Login</a>\n                </p>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "my draft",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mydrafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mydrafts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mydrafts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mydrafts"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:50:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "749"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "    \n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html>\n    <head>\n        <title>Error: 500 Internal Server Error</title>\n        <style type=\"text/css\">\n              html {background-color: #eee; font-family: sans;}\n              body {background-color: #fff; border: 1px solid #ddd;\n                    padding: 15px; margin: 15px;}\n              pre {background-color: #eee; border: 1px solid #ddd; padding: 5px;}\n            </style>\n    </head>\n    <body>\n        <h1>Error: 500 Internal Server Error</h1>\n        <p>Sorry, the requested URL \n            <tt>&#039;http://localhost:8080/mydrafts&#039;</tt>\n               caused an error:\n        </p>\n        <pre>Internal Server Error</pre>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Delete Draft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "zuhair",
+							"type": "text"
+						},
+						{
+							"key": "review_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/delete-draft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete-draft"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "zuhair",
+									"type": "text"
+								},
+								{
+									"key": "review_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/delete-draft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delete-draft"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 10 Nov 2023 00:56:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "753"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "    \n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html>\n    <head>\n        <title>Error: 500 Internal Server Error</title>\n        <style type=\"text/css\">\n              html {background-color: #eee; font-family: sans;}\n              body {background-color: #fff; border: 1px solid #ddd;\n                    padding: 15px; margin: 15px;}\n              pre {background-color: #eee; border: 1px solid #ddd; padding: 5px;}\n            </style>\n    </head>\n    <body>\n        <h1>Error: 500 Internal Server Error</h1>\n        <p>Sorry, the requested URL \n            <tt>&#039;http://localhost:8080/delete-draft&#039;</tt>\n               caused an error:\n        </p>\n        <pre>Internal Server Error</pre>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "forgot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "zuhair",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forgot"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "forgot",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "zuhair",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/forgot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forgot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Dec 2023 08:07:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Password reset successful. \n<a href='/start'>Login</a>"
+
+				},
+
+					{
+					  "name": "update_password",
+					  "request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+						  "mode": "formdata",
+						  "formdata": [
+							{ "key": "old_password", "value": "old_password_value", "type": "text" },
+							{ "key": "new_password", "value": "new_password_value", "type": "text" },
+							{ "key": "confirm_password", "value": "confirm_password_value", "type": "text" }
+						  ]
+						},
+						"url": {
+						  "raw": "http://localhost:8080/update-password",
+						  "protocol": "http",
+						  "host": ["localhost"],
+						  "port": "8080",
+						  "path": ["/update-password"]
+						}
+					  },
+					  "response": [
+						{
+						  "name": "Update Password",
+						  "originalRequest": {
+							"method": "POST",
+							"header": [],
+							"body": {
+							  "mode": "formdata",
+							  "formdata": [
+								{ "key": "old_password", "value": "old_password_value", "type": "text" },
+								{ "key": "new_password", "value": "new_password_value", "type": "text" },
+								{ "key": "confirm_password", "value": "confirm_password_value", "type": "text" }
+							  ]
+							},
+							"url": {
+							  "raw": "http://localhost:8080/update-password",
+							  "protocol": "http",
+							  "host": ["localhost"],
+							  "port": "8080",
+							  "path": ["/update-password"]
+							}
+						  },
+						  "status": "OK",
+						  "code": 200,
+						  "_postman_previewlanguage": "html",
+						  "header": [
+							{ "key": "Content-Type", "value": "text/html; charset=UTF-8" }
+						  ],
+						  "cookie": [],
+						  "body": "Password updated successfully. <a href='/settings'>Go back to settings</a>"
+						},{
+
+						  "name": "add_user_to_team",
+						  "request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+							  "mode": "formdata",
+							  "formdata": [
+								{ "key": "username", "value": "test_username", "type": "text" },
+								{ "key": "team_id", "value": "1", "type": "text" }
+							  ]
+							},
+							"url": {
+							  "raw": "http://localhost:8080/addUserToTeam",
+							  "protocol": "http",
+							  "host": ["localhost"],
+							  "port": "8080",
+							  "path": ["/addUserToTeam"]
+							}
+						  },
+						  "response": [
+							{
+							  "name": "Add User To Team",
+							  "originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+								  "mode": "formdata",
+								  "formdata": [
+									{ "key": "username", "value": "test_username", "type": "text" },
+									{ "key": "team_id", "value": "1", "type": "text" }
+								  ]
+								},
+								"url": {
+								  "raw": "http://localhost:8080/addUserToTeam",
+								  "protocol": "http",
+								  "host": ["localhost"],
+								  "port": "8080",
+								  "path": ["/addUserToTeam"]
+								}
+							  },
+							  "status": "OK",
+							  "code": 200,
+							  "_postman_previewlanguage": "html",
+							  "header": [
+								{ "key": "Content-Type", "value": "text/html; charset=UTF-8" }
+							  ],
+							  "cookie": [],
+							  "body": "User added to the team"
+        }
+	  ]
+	}
+  ]
+}
+
+
+
